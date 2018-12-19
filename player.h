@@ -31,7 +31,7 @@ Player::Player(WINDOW * win, int y, int x, char c)
 
 void Player::mvup()
 {
-	mvwaddch(curwin, yLoc, xLoc, '.');
+	mvwaddch(curwin, yLoc, xLoc, ' ');
 	yLoc--;
 	if(yLoc<1)
 		yLoc=1;
@@ -39,7 +39,7 @@ void Player::mvup()
 
 void Player::mvdown()
 {
-	mvwaddch(curwin, yLoc, xLoc, '.');
+	mvwaddch(curwin, yLoc, xLoc, ' ');
 	yLoc++;
 	if(yLoc>yMax-2)
 		yLoc=yMax-2;
@@ -47,7 +47,7 @@ void Player::mvdown()
 
 void Player::mvleft()
 {
-	mvwaddch(curwin, yLoc, xLoc, '.');
+	mvwaddch(curwin, yLoc, xLoc, ' ');
 	xLoc--;
 	if(xLoc<1)
 		xLoc=1;
@@ -55,10 +55,13 @@ void Player::mvleft()
 
 void Player::mvright()
 {
-	mvwaddch(curwin, yLoc, xLoc, '.');
+	mvwaddch(curwin, yLoc, xLoc, ' ');
 	xLoc++;
 	if(xLoc > xMax-2)
 		xLoc=xMax-2;
+
+	///////////////
+////////	if(xLoc > 
 }
 
 int Player::getmv()
