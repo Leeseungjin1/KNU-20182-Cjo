@@ -23,26 +23,26 @@ int main(int argc, char ** argv)
 
 
 
-	wmove(playwin, 12,39);
-	wvline(playwin, ' ', 1);
+	wmove(playwin, 10,39);
+	wvline(playwin, ' ', 5);
 	//wall
-	wmove(playwin, 4, 4);//1
+	wmove(playwin, 5, 4);//1
 	wvline(playwin, 0, 10);
 
-	wmove(playwin, 4,4); //2
+	wmove(playwin, 4,5); //2
 	whline(playwin, 0, 5);
 
-	wmove(playwin, 0, 9);//3
-	wvline(playwin, 0, 5);
-
-	wmove(playwin, 14, 9);//4
+	wmove(playwin, 1, 9);//3
 	wvline(playwin, 0, 10);
 
-	wmove(playwin, 14, 9);//5
-	whline(playwin, 0, 10);
+	wmove(playwin, 15, 9);//4
+	wvline(playwin, 0, 9);
 
-	wmove(playwin, 14, 19);//6
-	wvline(playwin, 0, 5);
+	wmove(playwin, 14, 10);//5
+	whline(playwin, 0, 9);
+
+	wmove(playwin, 15, 19);//6
+	wvline(playwin, 0, 4);
 
 	wmove(playwin, 19, 14);//7
 	whline(playwin, 0, 5);
@@ -50,22 +50,22 @@ int main(int argc, char ** argv)
 	wmove(playwin, 4, 14);//8
 	wvline(playwin, 0, 5);
 
-	wmove(playwin ,9, 14);//9
-	whline(playwin, 0, 10);
+	wmove(playwin ,9, 15);//9
+	whline(playwin, 0, 9);
 
-	wmove(playwin, 9, 24);//10
-	wvline(playwin, 0, 15);
+	wmove(playwin, 10, 24);//10
+	wvline(playwin, 0, 14);
 
-	wmove(playwin, 14,24);//11
-	whline(playwin, 0, 10);
+	wmove(playwin, 14,25);//11
+	whline(playwin, 0, 9);
 
-	wmove(playwin, 4, 34);//12
+	wmove(playwin, 4, 29);//12
 	wvline(playwin, 0, 10);
 
 	wmove(playwin, 4, 19);//13
 	whline(playwin, 0, 5);
 
-	wmove(playwin, 0,19);//14
+	wmove(playwin, 1,19);//14
 	wvline(playwin, 0, 5);
 
 	wmove(playwin, 1, 1);
@@ -78,7 +78,7 @@ int main(int argc, char ** argv)
 	while(p->getmv() != 'x')
 	{
 		getsyx(y,x);
-		if(y == 12&& x == 39)
+		if((y >= 10 || y <= 14)&& x == 39 )
 		{
 			break;
 		}
@@ -87,8 +87,6 @@ int main(int argc, char ** argv)
 		wrefresh(playwin);
 	};
 
-
-	getch();
 	endwin();
 
 	return 0;
