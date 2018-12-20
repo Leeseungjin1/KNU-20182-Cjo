@@ -60,8 +60,7 @@ void Player::mvright()
 	if(xLoc > xMax-2)
 		xLoc=xMax-2;
 
-	///////////////
-////////	if(xLoc > 
+	
 }
 
 int Player::getmv()
