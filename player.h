@@ -33,15 +33,15 @@ void Player::mvup()
 {
 	if (yLoc == 5 && (xLoc >= 3 && xLoc<=8))
 		yLoc = 5;
-	else if (yLoc == 15 && (xLoc >= 8 && xLoc <= 18))
+	else if (yLoc == 15 && (xLoc >= 9 && xLoc <= 19))
 		yLoc = 15;
-	else if (yLoc == 20 && (xLoc >= 13 && xLoc <= 18))
+	else if (yLoc == 20 && (xLoc >= 14 && xLoc <= 19))
 		yLoc = 20;
-	else if (yLoc == 10 &&(xLoc >= 13 && xLoc <= 23)) 
+	else if (yLoc == 10 &&(xLoc >= 14 && xLoc <= 24)) 
 		yLoc = 10;
-	else if (yLoc == 15 && (xLoc >=  23 && xLoc <= 33))
+	else if (yLoc == 15 && (xLoc >=  25 && xLoc <= 33))
 		yLoc = 15;
-	else if (yLoc == 5 && (xLoc >= 18 && xLoc <= 23)) 
+	else if (yLoc == 5 && (xLoc >= 19 && xLoc <= 23)) 
 		yLoc = 5;
 	else
 	{
@@ -56,15 +56,15 @@ void Player::mvdown()
 {
 	if (yLoc == 3 && (xLoc >= 3 && xLoc<=8))
 		yLoc = 3; 
-	else if (yLoc == 13 && (xLoc >= 8 && xLoc <= 18))
+	else if (yLoc == 13 && (xLoc >= 9 && xLoc <= 19))
 		yLoc = 13;
-	else if (yLoc == 18 && (xLoc >= 13 && xLoc <= 18))
+	else if (yLoc == 18 && (xLoc >= 14 && xLoc <= 19))
 		yLoc = 18;
-	else if (yLoc == 8 &&(xLoc >= 13 && xLoc <= 23))
+	else if (yLoc == 8 &&(xLoc >= 14 && xLoc <= 24))
 		yLoc = 8;
-	else if (yLoc == 13 && (xLoc >= 23 && xLoc <= 33))
+	else if (yLoc == 13 && (xLoc >= 25 && xLoc <= 33))
 		yLoc = 13;
-	else if (yLoc == 3 && (xLoc >= 18 && xLoc <= 23)) 
+	else if (yLoc == 3 && (xLoc >= 19 && xLoc <= 23)) 
 		yLoc = 3;
 	else
 	{

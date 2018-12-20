@@ -23,8 +23,8 @@ int main(int argc, char ** argv)
 
 
 
-	wmove(playwin, 10,39);
-	wvline(playwin, ' ', 5);
+	wmove(playwin, 12,39);
+	wvline(playwin, ' ', 2);
 	//wall
 	wmove(playwin, 5, 4);//1
 	wvline(playwin, 0, 10);
@@ -78,7 +78,7 @@ int main(int argc, char ** argv)
 	while(p->getmv() != 'x')
 	{
 		getsyx(y,x);
-		if((y >= 10 && y <= 14)&& x == 39 )
+		if((y >= 12 && y <= 13)&& x == 39 )
 		{
 			break;
 		}
