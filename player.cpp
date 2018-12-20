@@ -78,7 +78,7 @@ int main(int argc, char ** argv)
 	while(p->getmv() != 'x')
 	{
 		getsyx(y,x);
-		if((y >= 10 || y <= 14)&& x == 39 )
+		if((y >= 10 && y <= 14)&& x == 39 )
 		{
 			break;
 		}
