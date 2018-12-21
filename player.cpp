@@ -82,7 +82,7 @@ int main(int argc, char ** argv)
 	Player *p=new Player(playwin, 1, 1, 'a');
 	
 
-	//if input q, exit
+	//q를 누르거나 미로를 탈출하면 종료
 	while(p->getmv() != 'q')
 	{
 		getsyx(y,x);

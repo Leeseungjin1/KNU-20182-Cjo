@@ -34,11 +34,11 @@ void Player::mvup()
 	if (yLoc == 5 && (xLoc >= 4 && xLoc<=8))
 		yLoc = 5;
 	
-	//1번벽 못올라가게
+	//1번벽 삭제방지 
 	else if(yLoc ==15 && xLoc==4)
 		yLoc==15;
 	
-	//3번 못올라가게
+	//3번
 	else if(yLoc==11 && xLoc==9)
 		yLoc==11;
 	
@@ -71,7 +71,7 @@ void Player::mvdown()
 	if (yLoc == 3 && (xLoc >= 4 && xLoc<=8))
 		yLoc = 3; 
 
-	//8번 안되게
+	//8번
 	else if(yLoc==3 && xLoc==14)
 		yLoc =3;
 
@@ -100,11 +100,11 @@ void Player::mvdown()
 
 void Player::mvleft()
 {
-	//1 lock
+	//1
 	if(xLoc==5 && yLoc>=4 && yLoc<=14)
 		xLoc=5;
 
-	//7번 벽 안되게
+	//7번
 	else if(xLoc==20 && yLoc==19)
 		xLoc==20;
 
@@ -118,12 +118,12 @@ void Player::mvleft()
 
 
 
-	//3 lock
+	//3
 	else if(xLoc==10 && yLoc>=0 && yLoc<=10)
 		xLoc=10;
 
 
-	//4 lock
+	//4
 	else if(xLoc==10 && yLoc>=14 && yLoc<=23 )
 		xLoc=10;
 
@@ -158,20 +158,20 @@ void Player::mvleft()
 
 void Player::mvright()
 {
-	//1 lock
+	//1
 	if(xLoc==3 && yLoc>=4 && yLoc<=14)
 		xLoc=3;
 	
-	//7번 벽
+	//7
 	else if(xLoc==13 && yLoc==19)
 		xLoc==13;
 
-	//3 lock
+	//3
 	else if(xLoc==8 && yLoc>=0 && yLoc<=10)
 		xLoc=8;
 
 
-	//4 lock
+	//4
 	else if(xLoc==8 && yLoc>=14 && yLoc<=23 )
 		xLoc=8;
 
