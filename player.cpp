@@ -17,14 +17,17 @@ int main(int argc, char ** argv)
 	int a,b;
 	getmaxyx(stdscr, yMax, xMax);
 
-	//size
+	//size & box
 	WINDOW * playwin = newwin(25, 40, 0, 0);
 	box(playwin, 0, 0);
 
-
-
+	
+	//end point
 	wmove(playwin, 12,39);
 	wvline(playwin, ' ', 2);
+
+
+
 	//wall
 	wmove(playwin, 5, 4);//1
 	wvline(playwin, 0, 10);
@@ -68,6 +71,9 @@ int main(int argc, char ** argv)
 	wmove(playwin, 1,19);//14
 	wvline(playwin, 0, 5);
 
+
+
+	//start point
 	wmove(playwin, 1, 1);
 
 	refresh();
@@ -75,7 +81,9 @@ int main(int argc, char ** argv)
 
 	Player *p=new Player(playwin, 1, 1, 'a');
 	
-	while(p->getmv() != 'x')
+
+	//if input q, exit
+	while(p->getmv() != 'q')
 	{
 		getsyx(y,x);
 		if((y >= 12 && y <= 13)&& x == 39 )

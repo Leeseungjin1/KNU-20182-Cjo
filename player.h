@@ -31,8 +31,22 @@ Player::Player(WINDOW * win, int y, int x, char c)
 
 void Player::mvup()
 {
-	if (yLoc == 5 && (xLoc >= 3 && xLoc<=8))
+	if (yLoc == 5 && (xLoc >= 4 && xLoc<=8))
 		yLoc = 5;
+	
+	//1번벽 못올라가게
+	else if(yLoc ==15 && xLoc==4)
+		yLoc==15;
+	
+	//3번 못올라가게
+	else if(yLoc==11 && xLoc==9)
+		yLoc==11;
+	
+	//14번
+	else if(yLoc==6 && xLoc==19)
+		yLoc==6;
+
+
 	else if (yLoc == 15 && (xLoc >= 9 && xLoc <= 19))
 		yLoc = 15;
 	else if (yLoc == 20 && (xLoc >= 14 && xLoc <= 19))
@@ -54,8 +68,17 @@ void Player::mvup()
 
 void Player::mvdown()
 {
-	if (yLoc == 3 && (xLoc >= 3 && xLoc<=8))
+	if (yLoc == 3 && (xLoc >= 4 && xLoc<=8))
 		yLoc = 3; 
+
+	//8번 안되게
+	else if(yLoc==3 && xLoc==14)
+		yLoc =3;
+
+	//12번
+	else if(yLoc==3 && xLoc==29)
+		yLoc=3;
+
 	else if (yLoc == 13 && (xLoc >= 9 && xLoc <= 19))
 		yLoc = 13;
 	else if (yLoc == 18 && (xLoc >= 14 && xLoc <= 19))
@@ -80,6 +103,19 @@ void Player::mvleft()
 	//1 lock
 	if(xLoc==5 && yLoc>=4 && yLoc<=14)
 		xLoc=5;
+
+	//7번 벽 안되게
+	else if(xLoc==20 && yLoc==19)
+		xLoc==20;
+
+	//13번
+	else if(xLoc==24 && yLoc==4)
+		xLoc=24;
+
+	//11번
+	else if(xLoc==34 && yLoc==14)
+		xLoc=34;
+
 
 
 	//3 lock
@@ -125,7 +161,10 @@ void Player::mvright()
 	//1 lock
 	if(xLoc==3 && yLoc>=4 && yLoc<=14)
 		xLoc=3;
-
+	
+	//7번 벽
+	else if(xLoc==13 && yLoc==19)
+		xLoc==13;
 
 	//3 lock
 	else if(xLoc==8 && yLoc>=0 && yLoc<=10)
@@ -156,18 +195,12 @@ void Player::mvright()
 	else if(xLoc==18 && yLoc>=0 && yLoc<=5)
 		xLoc=18;
 
-
-
-
-
 	else
 	{
-
 		mvwaddch(curwin, yLoc, xLoc, ' ');
 		xLoc++;
 		if(xLoc > xMax-2)
 			xLoc=xMax-2;
-
 	}
 	
 }
